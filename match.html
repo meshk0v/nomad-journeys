@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Подбор тура — NOMAD Journeys</title><meta name="description" content="Подберите путешествие по бюджету, сезону, длительности, физической подготовке и интересам.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"></head><body data-page="match"><main>
+<div class="phead"><div class="wrap"><div class="crumbs"><a href="index.html">Главная</a> / Подбор тура</div><h1>Подбор тура</h1><p>Укажите условия, и мы покажем подходящие варианты с объяснением. Если точных совпадений нет, предложим ближайшие.</p></div></div>
+<section class="s" style="padding-top:40px"><div class="wrap">
+<form class="form" id="mForm"><div class="row2"><label>Бюджет на человека, ₽<input class="in" type="number" id="mBudget" value="150000" min="30000" step="5000"></label><label>Когда хотите ехать<select class="in" id="mMonth"></select></label></div>
+<div class="row2"><label>Длительность<select class="in" id="mDur"><option value="">Любая</option><option value="s">до 7 дней</option><option value="m">8–10 дней</option><option value="l">11 дней и больше</option></select></label><label>Физическая подготовка<select class="in" id="mFit"><option value="1">Минимальная: прогулки, без нагрузок</option><option value="2" selected>Средняя: 4–6 часов ходьбы в день</option><option value="3">Высокая: многодневные походы, высота</option></select></label></div>
+<label>Что интересует (можно несколько)<div class="picks" id="mCats"></div></label>
+<label class="chk"><input type="checkbox" id="mPriv"> Хочу поехать своей компанией (приватный формат)</label>
+<button class="btn lg">Подобрать</button></form><div id="mRes" style="margin-top:40px"></div></div></section>
+</main><script src="assets/data.js"></script><script src="assets/app.js"></script></body></html>

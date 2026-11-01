@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOMAD Journeys — авторские путешествия малыми группами</title><meta name="description" content="Каталог из 30 авторских маршрутов по 26 странам: горы, океан, пустыни, культура и гастрономия. Подробные программы и понятные условия.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"></head><body data-page="home" class="home"><main>
+<section class="hero" id="hero"><div class="slides" id="slides"></div><div class="hero-shade"></div>
+<div class="wrap hero-in"><span class="eyebrow pill">🧭 Авторские путешествия малыми группами</span>
+<h1>Маршруты, где слышно <span class="rot" id="rot"><b>горы</b></span></h1>
+<p>Небольшие группы, гиды, которые знают регион, и подробные программы по дням. Выбирайте поездку по сезону, бюджету и нагрузке и сразу видите, что входит и для кого она не подойдёт.</p>
+<div class="hero-cta"><a class="btn lg" href="tours.html">Выбрать путешествие</a><a class="btn lg ghost" href="match.html" style="color:#fff">Подобрать тур</a></div></div>
+<div class="now" id="now"><b id="cap">📍</b>Фото из направлений каталога</div>
+<svg class="mnt m1" viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 220V120l120-60 110 70 140-100 160 110 120-70 170 90 150-110 140 80 130-60 200 90v90z" fill="#2c6a50" opacity=".55"/></svg>
+<svg class="mnt m2" viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 220V150l140-50 130 60 150-80 140 90 160-60 150 70 120-90 150 80 150-50 140 40v100z" fill="#1c4a38" opacity=".8"/></svg>
+<svg class="mnt m3" viewBox="0 0 1440 220" preserveAspectRatio="none"><path d="M0 220v-50l100-30 120 40 130-50 160 50 140-30 150 40 140-40 130 40 150-30 120 30 100-20v100z"/></svg>
+<form class="search" id="search"><label><small>Куда</small><input id="sQ" placeholder="Страна, регион или гид"><datalist id="dl"></datalist></label>
+<label><small>Когда</small><select id="sMonth"></select></label><label><small>Тип тура</small><select id="sCat"></select></label><button class="btn lg">Найти туры</button></form></section>
+
+<div class="marquee"><div class="mq"><span>Непал</span><i>✦</i><span>Доломиты</span><i>✦</i><span>Исландия</span><i>✦</i><span>Перу</span><i>✦</i><span>Марокко</span><i>✦</i><span>Монголия</span><i>✦</i><span>Лофотены</span><i>✦</i><span>Новая Зеландия</span><i>✦</i><span>Грузия</span><i>✦</i><span>Камчатка</span><i>✦</i>
+<span>Непал</span><i>✦</i><span>Доломиты</span><i>✦</i><span>Исландия</span><i>✦</i><span>Перу</span><i>✦</i><span>Марокко</span><i>✦</i><span>Монголия</span><i>✦</i><span>Лофотены</span><i>✦</i><span>Новая Зеландия</span><i>✦</i><span>Грузия</span><i>✦</i><span>Камчатка</span><i>✦</i></div></div>
+
+<section class="s first"><div class="wrap"><div class="sh"><div><span class="eyebrow">Выберите стихию</span><h2>Какое путешествие вам ближе?</h2><p>Наведите на панель, чтобы увидеть, какие маршруты в каталоге.</p></div></div><div class="elems" id="elems"></div></div></section>
+
+<section class="s alt rail-s"><div class="wrap"><div class="sh"><div><span class="eyebrow">Подборка</span><h2>С чего начать</h2><p>Девять маршрутов разной сложности, длительности и бюджета.</p></div><div class="arrows"><button id="prev" aria-label="Назад">←</button><button id="next" aria-label="Вперёд">→</button></div></div></div><div class="rail" id="hot"></div></section>
+
+<section class="band" data-parallax="milky"><div class="band-in wrap rv"><span class="eyebrow" style="color:var(--gold)">Каталог в цифрах</span><h2>Маршруты от лёгких прогулок до экспедиций</h2><div class="counts" id="stats"></div><a class="btn lg" href="tours.html">Открыть каталог →</a></div></section>
+
+<section class="s"><div class="wrap"><div class="sh"><div><span class="eyebrow">Направления</span><h2>Куда можно поехать</h2></div><a class="more" href="destinations.html">Все направления →</a></div><div class="mosaic" id="dests"></div></div></section>
+
+<section class="s dark topo"><div class="wrap"><div class="sh"><div><span class="eyebrow" style="color:var(--gold)">Как мы работаем</span><h2>Подробно, честно и без спешки</h2><p>Каждый маршрут описан так, чтобы вы заранее понимали программу, нагрузку и условия.</p></div></div>
+<div class="grid g4"><div class="feat"><i>👥</i><h3>Малые группы</h3><p>От 4 до 14 человек: проще жить в небольших гостевых домах и общаться с местными.</p></div><div class="feat"><i>🧭</i><h3>Гиды, знающие регион</h3><p>Профиль каждого гида: опыт, языки, специализация и стиль ведения поездок.</p></div><div class="feat"><i>📋</i><h3>Прозрачные условия</h3><p>Что включено, что оплачивается отдельно, кому тур не подойдёт и что может измениться.</p></div><div class="feat"><i>🤝</i><h3>Приватный формат</h3><p>Многие маршруты можно провести для своей компании в удобные даты и темпе.</p></div></div></div></section>
+
+<section class="s"><div class="wrap"><div class="sh"><div><span class="eyebrow">Гиды</span><h2>Познакомьтесь с гидами</h2><p>Профили демонстрационные: так будет выглядеть раздел после подключения реальных партнёров.</p></div><a class="more" href="guides.html">Все гиды →</a></div><div class="grid g4" id="guides"></div></div></section>
+
+<section class="s alt"><div class="wrap"><div class="grid g2" style="gap:34px;align-items:center"><div><span class="eyebrow">Не знаете, что выбрать?</span><h2 style="font-size:clamp(28px,3.6vw,40px)">Подберём путешествие по вашим условиям</h2><p style="color:var(--mut);margin:14px 0 22px">Укажите бюджет, месяц, длительность, физическую подготовку и интересы, и сервис покажет подходящие туры с объяснением, почему они подходят. Если точных вариантов нет, предложит ближайшие.</p><a class="btn lg" href="match.html">Подобрать тур</a></div><div class="box warn"><h4>О статусе данных</h4><p>Сайт — демонстрационная основа. Цены, даты выездов, места и профили гидов иллюстративные. Мы не публикуем отзывы, которых не было, и не показываем придуманные гарантии. <a href="data-status.html">Какие данные требуют подтверждения</a>.</p></div></div></div></section>
+
+<section class="s"><div class="wrap"><div class="cta" style="background-image:linear-gradient(100deg,rgba(15,42,32,.92),rgba(15,42,32,.45)),url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=70&w=1600')"><div><h2>Вы гид или организатор путешествий?</h2><p>Расскажите о маршруте — мы рассмотрим возможность партнёрства. Раздел демонстрационный: заявки пока никуда не отправляются.</p></div><a class="btn lg" href="become-guide.html">Стать гидом-партнёром</a></div></div></section>
+</main><script src="assets/data.js"></script><script src="assets/app.js"></script></body></html>

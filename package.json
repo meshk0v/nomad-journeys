@@ -1,0 +1,12 @@
+{
+  "name": "nomad-journeys",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Демонстрационный сайт и каталог туров NOMAD Journeys",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "departures": "node scripts/gen-departures.js",
+    "serve": "python3 -m http.server 8000"
+  },
+  "engines": { "node": ">=18" }
+}

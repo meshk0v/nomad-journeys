@@ -1,0 +1,379 @@
+{
+ "unsplash": {
+  "usa": "1469854523086-cc02fe5d8800",
+  "usa2": "1500530855697-b586d89ba3ee",
+  "dolomites": "1501785888041-af3ef285b470",
+  "dolo2": "1476514525535-07fb3b4ae5f1",
+  "kyoto": "1493976040374-85c8e12f0c0e",
+  "alps": "1506905925346-21bda4d32df4",
+  "beach": "1507525428034-b723cf961d3e",
+  "dubai": "1512453979798-5ea266f8880c",
+  "bali": "1518548419970-58e3b4079ab2",
+  "trek": "1526772662000-3f88f10405ff",
+  "japan": "1528164344705-47542687000d",
+  "aurora": "1531366936337-7c912a4589a7",
+  "egypt": "1539650116574-8efeb43e2750",
+  "india": "1548013146-72479768bada",
+  "fuji": "1589308078059-be1415eab4c3",
+  "yos": "1426604966848-d7adac402bff",
+  "fall": "1433086966358-54859d0ed716",
+  "lakeL": "1439853949127-fa647821eba0",
+  "forest": "1441974231531-c6227db76b6e",
+  "bridge": "1447752875215-b2761acb3c5d",
+  "himal": "1454496522488-7a8e488e8606",
+  "redlake": "1464278533981-50106e6176b1",
+  "valley": "1464822759023-fed622ff2c3b",
+  "hills": "1469474968028-56623f02e42e",
+  "moors": "1470071459604-3b5ec3a7fe05",
+  "cliffs": "1472396961693-142e6e269027",
+  "sunsea": "1473116763249-2faaef81ccda",
+  "canyon": "1482938289607-e9573fc25ebb",
+  "peak": "1483728642387-6c3bdd6c93e5",
+  "wave": "1500375592092-40eb2168fd21",
+  "aerial": "1505118380757-91f5f5632de0",
+  "dawn": "1506744038136-46273834b3fb",
+  "rockpeak": "1508739773434-c26b3d09e071",
+  "desert": "1509316785289-025f5b846b35",
+  "cove": "1510414842594-a61c69b5ae57",
+  "milky": "1519681393784-d120267933ba"
+ },
+ "commons": {
+  "np-1": {
+   "file": "Panorama from poonhill-2019-BJ.jpg",
+   "author": "Bijay Chaurasia",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Panorama_from_poonhill-2019-BJ.jpg"
+  },
+  "np-2": {
+   "file": "Annapurna Base Camp with snow.jpg",
+   "author": "Samdesherpa",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Annapurna_Base_Camp_with_snow.jpg"
+  },
+  "np-3": {
+   "file": "Modi river along trekking way to Annapurna Base Camp- Kaski District-3450.jpg",
+   "author": "Bijay Chaurasia",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Modi_river_along_trekking_way_to_Annapurna_Base_Camp-_Kaski_District-3450.jpg"
+  },
+  "np-4": {
+   "file": "Boudha Stupa 2018 04.jpg",
+   "author": "Nabin K. Sapkota",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Boudha_Stupa_2018_04.jpg"
+  },
+  "vn-1": {
+   "file": "NKS07164.jpg",
+   "author": "NKSTTSSHNVN",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:NKS07164.jpg"
+  },
+  "vn-2": {
+   "file": "Ha Long Bay 22.jpg",
+   "author": "Shyamal",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ha_Long_Bay_22.jpg"
+  },
+  "vn-3": {
+   "file": "Hoi An Ancient Town (85907).jpg",
+   "author": "Andre Hospers",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hoi_An_Ancient_Town_(85907).jpg"
+  },
+  "vn-4": {
+   "file": "Can Tho, Vietnam, Floating Market, Boats.jpg",
+   "author": "Vyacheslav Argenberg",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Can_Tho,_Vietnam,_Floating_Market,_Boats.jpg"
+  },
+  "th-1": {
+   "file": "Railay.jpg",
+   "author": "Wendy Harman",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Railay.jpg"
+  },
+  "th-2": {
+   "file": "Doi Suthep Temple Chiang Mai Thailand.jpg",
+   "author": "Philip Nalangan",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Doi_Suthep_Temple_Chiang_Mai_Thailand.jpg"
+  },
+  "th-3": {
+   "file": "Phi Phi Island, Maya Bay on Phi Phi Leh (6222526031).jpg",
+   "author": "Fabio Achilli from Milano, Italy",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Phi_Phi_Island,_Maya_Bay_on_Phi_Phi_Leh_(6222526031).jpg"
+  },
+  "no-1": {
+   "file": "Reine Lofoten 2009.JPG",
+   "author": "User:Sveter (Please credit as \"Petr Šmerkl, Wikipedia\" in case you use this outs",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Reine_Lofoten_2009.JPG"
+  },
+  "no-2": {
+   "file": "Hamnøy Reine Moskenes Lofoten norway tunliweb 02.jpg",
+   "author": "Svein-Magne Tunli - tunliweb.no",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hamn%C3%B8y_Reine_Moskenes_Lofoten_norway_tunliweb_02.jpg"
+  },
+  "no-3": {
+   "file": "Houses of Reine by Gravdalsbukta, Moskenes, Nordland, Norway, 2022 June.jpg",
+   "author": "Ximonic (Simo Räsänen)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Houses_of_Reine_by_Gravdalsbukta,_Moskenes,_Nordland,_Norway,_2022_June.jpg"
+  },
+  "pe-1": {
+   "file": "Machu Picchu (172664513).jpeg",
+   "author": "Yoann Supertramp",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Machu_Picchu_(172664513).jpeg"
+  },
+  "pe-2": {
+   "file": "Humantay Lake.jpg",
+   "author": "Nicolas Rénac",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Humantay_Lake.jpg"
+  },
+  "pe-3": {
+   "file": "Peru - Salkantay Trek 022 - Nevado Salkantay (7154577677).jpg",
+   "author": "Salkantay Trek McKay Savage from London, UK",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Peru_-_Salkantay_Trek_022_-_Nevado_Salkantay_(7154577677).jpg"
+  },
+  "ma-1": {
+   "file": "Merzouga sahara.jpg",
+   "author": "Lefidele",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Merzouga_sahara.jpg"
+  },
+  "ma-2": {
+   "file": "Chefchaouen-the-blue-city-of-morocco-with-palm-trees-and-the-mountain-view-in-the-backrgound.jpg",
+   "author": "Badr Rachadi",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Chefchaouen-the-blue-city-of-morocco-with-palm-trees-and-the-mountain-view-in-the-backrgound.jpg"
+  },
+  "ma-3": {
+   "file": "Kasbah Ait Benhaddou, Morocco (1) (30765760583) (cropped to focus on old town).jpg",
+   "author": "ER Bauer from Freising, Germany",
+   "license": "CC BY 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Kasbah_Ait_Benhaddou,_Morocco_(1)_(30765760583)_(cropped_to_focus_on_old_town).jpg"
+  },
+  "ma-4": {
+   "file": "2026 (365 Challenge) - Day 187 - Jemaa el-fnaa square with evening market, Marrakech, Morocco 2010 - Flickr - ambabheg.jpg",
+   "author": "Forbes Johnston from Winchester, UK",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2026_(365_Challenge)_-_Day_187_-_Jemaa_el-fnaa_square_with_evening_market,_Marrakech,_Morocco_2010_-_Flickr_-_ambabheg.jpg"
+  },
+  "tr-1": {
+   "file": "Balloons over Cappadocia-2015-05-16-1.jpg",
+   "author": "Alexey Komarov",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Balloons_over_Cappadocia-2015-05-16-1.jpg"
+  },
+  "tr-2": {
+   "file": "Cappadocia Aerial View Landscape.jpg",
+   "author": "Benh LIEU SONG (Flickr)",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cappadocia_Aerial_View_Landscape.jpg"
+  },
+  "tr-3": {
+   "file": "Turkey, Istanbul, Hagia Sophia (Ayasofya) (3945438184).jpg",
+   "author": "Dave Proffer",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Turkey,_Istanbul,_Hagia_Sophia_(Ayasofya)_(3945438184).jpg"
+  },
+  "tr-4": {
+   "file": "The Travertine terraces of Pamukkale.jpg",
+   "author": "Slyronit",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Travertine_terraces_of_Pamukkale.jpg"
+  },
+  "ge-1": {
+   "file": "2019 - Tusheti National Park - Morning in the Upper Omalo.jpg",
+   "author": "Moahim",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2019_-_Tusheti_National_Park_-_Morning_in_the_Upper_Omalo.jpg"
+  },
+  "ge-2": {
+   "file": "Kazbegi - Gergeti Trinity Church (9460878378).jpg",
+   "author": "Andrzej Wójtowicz from Poznań, Poland",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kazbegi_-_Gergeti_Trinity_Church_(9460878378).jpg"
+  },
+  "ge-3": {
+   "file": "Rainbow in Kakheti.jpg",
+   "author": "Vladimir Pankratov",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rainbow_in_Kakheti.jpg"
+  },
+  "lk-1": {
+   "file": "Nine Arches Bridge in Ella.jpg",
+   "author": "Knthabrew",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nine_Arches_Bridge_in_Ella.jpg"
+  },
+  "lk-2": {
+   "file": "Sigiriya.jpg",
+   "author": "Bernard Gagnon",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sigiriya.jpg"
+  },
+  "lk-3": {
+   "file": "Tea-plantation Nuwara Eliya-2567.jpg",
+   "author": "Bergentroll",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tea-plantation_Nuwara_Eliya-2567.jpg"
+  },
+  "lk-4": {
+   "file": "202005.yla.jpg",
+   "author": "Annelicious i",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:202005.yla.jpg"
+  },
+  "pt-1": {
+   "file": "Ribeira from Dom Luis I bridge (4).jpg",
+   "author": "Krzysztof Golik",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ribeira_from_Dom_Luis_I_bridge_(4).jpg"
+  },
+  "pt-2": {
+   "file": "Tram 28 (34791358090).jpg",
+   "author": "Shadowgate from Novara, ITALY",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tram_28_(34791358090).jpg"
+  },
+  "pt-3": {
+   "file": "Ribeira from Dom Luis I bridge (2).jpg",
+   "author": "Krzysztof Golik",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ribeira_from_Dom_Luis_I_bridge_(2).jpg"
+  },
+  "kr-1": {
+   "file": "Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg",
+   "author": "Frank Schulenburg",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg"
+  },
+  "kr-2": {
+   "file": "Seongsan Ilchulbong from the air.jpg",
+   "author": "Korea.net / Korean Culture and Information Service",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg"
+  },
+  "kr-3": {
+   "file": "Bukchon-ro 11-gil street with hanok houses in Bukchon Hanok Village Seoul.jpg",
+   "author": "Basile Morin",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bukchon-ro_11-gil_street_with_hanok_houses_in_Bukchon_Hanok_Village_Seoul.jpg"
+  },
+  "nz-1": {
+   "file": "Milford Sound, Mitre Peak, ships 2016-01-31-2.jpg",
+   "author": "Szilas",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:Milford_Sound,_Mitre_Peak,_ships_2016-01-31-2.jpg"
+  },
+  "nz-2": {
+   "file": "Church of the Good Shepherd, Lake Tekapo, New Zealand 03.jpg",
+   "author": "Michal Klajban",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Church_of_the_Good_Shepherd,_Lake_Tekapo,_New_Zealand_03.jpg"
+  },
+  "nz-3": {
+   "file": "Hooker Valley towards Aoraki Mount Cook at sunset.jpg",
+   "author": "Pseudopanax at English Wikipedia",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Hooker_Valley_towards_Aoraki_Mount_Cook_at_sunset.jpg"
+  },
+  "jo-1": {
+   "file": "Al-Khazneh 2, Petra, Jordan.jpg",
+   "author": "Vyacheslav Argenberg",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Al-Khazneh_2,_Petra,_Jordan.jpg"
+  },
+  "jo-2": {
+   "file": "Wadi rum desert.jpg",
+   "author": "Peter Chisholm",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wadi_rum_desert.jpg"
+  },
+  "jo-3": {
+   "file": "17 Wadi Mujib Malaqi Trail - In the Siq - panoramio.jpg",
+   "author": "hikinginjordan",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:17_Wadi_Mujib_Malaqi_Trail_-_In_the_Siq_-_panoramio.jpg"
+  },
+  "tz-1": {
+   "file": "Serengeti wildebeest migration JF.jpg",
+   "author": "Wolves201",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Serengeti_wildebeest_migration_JF.jpg"
+  },
+  "tz-2": {
+   "file": "Elefanten fressen Baobab-Rinde.jpg",
+   "author": "Leyo",
+   "license": "CC BY-SA 2.5 ch",
+   "page": "https://commons.wikimedia.org/wiki/File:Elefanten_fressen_Baobab-Rinde.jpg"
+  },
+  "tz-3": {
+   "file": "2019 Ngorongoro Crater.jpg",
+   "author": "PLBechly",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2019_Ngorongoro_Crater.jpg"
+  },
+  "mn-1": {
+   "file": "Camels at Khongoryn Els 01.jpg",
+   "author": "Bernard Gagnon",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Camels_at_Khongoryn_Els_01.jpg"
+  },
+  "mn-2": {
+   "file": "Mongolian Ger.jpg",
+   "author": "Mark Fischer",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mongolian_Ger.jpg"
+  },
+  "mn-3": {
+   "file": "Resized pan-flaming-cropped2.jpg",
+   "author": "Zoharby",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Resized_pan-flaming-cropped2.jpg"
+  },
+  "kam-1": {
+   "file": "Avachinsky Volcano (23682444539).jpg",
+   "author": "kuhnmi",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Avachinsky_Volcano_(23682444539).jpg"
+  },
+  "kam-2": {
+   "file": "Valley of Geysers (Kamchatka, 2020)-3.jpg",
+   "author": "Rubin16",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Valley_of_Geysers_(Kamchatka,_2020)-3.jpg"
+  },
+  "kam-3": {
+   "file": "Mutnovsky Volcano - Kamchatka, Russian Federation - Summer 1993 01.jpg",
+   "author": "Giorgio Galeotti",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mutnovsky_Volcano_-_Kamchatka,_Russian_Federation_-_Summer_1993_01.jpg"
+  },
+  "tus-1": {
+   "file": "Cypress avenue at Via Cassia in Val d'Orcia.jpg",
+   "author": "Enrico Pighetti from Civitanova Marche, Italia",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cypress_avenue_at_Via_Cassia_in_Val_d%27Orcia.jpg"
+  },
+  "tus-2": {
+   "file": "The Towers of San Gimignano at Sunset from the Rocca of Montestaffoli.jpg",
+   "author": "Julian Lupyan",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Towers_of_San_Gimignano_at_Sunset_from_the_Rocca_of_Montestaffoli.jpg"
+  },
+  "tus-3": {
+   "file": "Q-02.jpg",
+   "author": "Querciabella",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Q-02.jpg"
+  }
+ },
+ "note": "Unsplash: свободная лицензия Unsplash, атрибуция не требуется. Wikimedia Commons: изображения под указанными лицензиями, необходимо указывать автора и лицензию."
+}

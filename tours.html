@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Каталог туров — NOMAD Journeys</title><meta name="description" content="Каталог авторских туров с фильтрами по стране, цене, длительности, категории, сложности и сезону.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"></head><body data-page="tours"><main>
+<div class="phead"><div class="wrap"><div class="crumbs"><a href="index.html">Главная</a> / Туры</div><h1>Каталог туров</h1><p>Фильтруйте по стране, цене, длительности, типу, сложности и сезону.</p></div></div>
+<section class="s" style="padding-top:40px"><div class="wrap cat-lay">
+<form class="filters" onsubmit="return false"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><b>Фильтры</b><button type="button" class="btn sm ghost fbtn" id="close" style="color:var(--forest)">Закрыть</button></div>
+<div class="fg"><h4>Поиск</h4><input type="text" id="fQ" placeholder="Страна, название, гид"></div>
+<div class="fg"><h4>Страна</h4><div id="fCountry" class="scroll"></div></div>
+<div class="fg"><h4>Категория</h4><div id="fCat"></div></div>
+<div class="fg"><h4>Сложность</h4><label><input type="radio" name="lvl" value="1">Лёгкий</label><label><input type="radio" name="lvl" value="2">Средний</label><label><input type="radio" name="lvl" value="3">Сложный</label></div>
+<div class="fg"><h4>Сезон</h4><div id="fSeason"></div><select id="fMonth" style="margin-top:8px"></select></div>
+<div class="fg"><h4>Длительность</h4><label><input type="checkbox" name="dur" value="s">до 6 дней</label><label><input type="checkbox" name="dur" value="m">7–9 дней</label><label><input type="checkbox" name="dur" value="l">10–12 дней</label><label><input type="checkbox" name="dur" value="xl">13 дней и больше</label></div>
+<div class="fg"><h4>Стоимость: <span id="vPrice"></span></h4><input class="range" type="range" id="fPrice" min="60000" max="400000" step="10000" value="400000"></div>
+<div class="fg"><h4>Тип путешествия</h4><label><input type="checkbox" name="format" value="group">Малая группа</label><label><input type="checkbox" name="format" value="private">Можно провести приватно</label></div>
+<button type="button" class="btn ghost sm" id="reset" style="color:var(--forest);width:100%">Сбросить</button></form>
+<div><div class="bar"><div><button class="btn sm dark fbtn" type="button" onclick="document.querySelector('.filters').classList.add('open')">Фильтры</button> <b id="count"></b></div>
+<select id="sort"><option value="rec">По алфавиту</option><option value="date">По ближайшей дате</option><option value="cheap">Сначала дешёвые</option><option value="exp">Сначала дорогие</option><option value="short">Сначала короткие</option><option value="long">Сначала длинные</option><option value="easy">Сначала лёгкие</option></select></div>
+<div id="active" class="chips" style="margin-bottom:16px"></div>
+<div class="grid g3" id="list" style="grid-template-columns:repeat(auto-fill,minmax(270px,1fr))"></div></div></div></section>
+</main><script src="assets/data.js"></script><script src="assets/app.js"></script></body></html>

@@ -1,0 +1,9 @@
+{
+  "brand": { "name": "NOMAD Journeys", "tagline": "Авторские путешествия малыми группами", "locale": "ru-RU", "currency": "RUB" },
+  "data_version": "2026-11-01",
+  "demo": {
+    "is_demo": true,
+    "notice": "Демонстрационная версия: цены, даты выездов, количество мест, контакты и профили гидов — иллюстративные. Они не являются коммерческим предложением и будут заменены подтверждёнными данными.",
+    "tour_flags": { "price": "demo", "departures": "demo", "seats": "demo", "itinerary": "concept_requires_operator_review", "entry_requirements": "unverified" }
+  }
+}
