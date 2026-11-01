@@ -20,7 +20,6 @@ const credit = key => IM.commons[key] ? `Фото: ${IM.commons[key].author}, ${
 const depsOf = t => DEPS.filter(d => d.tour_id === t.id && d.status !== 'cancelled').sort((a, b) => a.start_date.localeCompare(b.start_date));
 const priceOf = (t, d) => d && d.price_override ? d.price_override : t.price_from;
 const list = a => a && a.length ? `<ul class="ul">${a.map(x => `<li>${x}</li>`).join('')}</ul>` : '';
-const demoTag = '<span class="demo-tag" title="Демонстрационные данные: требуют подтверждения">демо</span>';
 
 const favs = {
   get: () => JSON.parse(localStorage.getItem('nj-fav') || '[]'),
@@ -39,8 +38,8 @@ function layout() {
   <div>${logo.replace('class="logo"', 'class="logo light"')}<p style="max-width:330px;font-size:15px;margin-top:12px">Авторские путешествия малыми группами. Подробные программы, понятные условия и гиды, которые знают регион.</p></div>
   <div><h4>Путешествия</h4><a href="tours.html">Все туры</a><a href="match.html">Подбор тура</a><a href="destinations.html">Направления</a><a href="guides.html">Гиды</a><a href="favorites.html">Избранное</a></div>
   <div><h4>Компания</h4><a href="about.html">О компании</a><a href="how-it-works.html">Как организуются поездки</a><a href="booking-payment.html">Бронирование и оплата</a><a href="safety.html">Безопасность</a><a href="become-guide.html">Стать гидом-партнёром</a></div>
-  <div><h4>Связь</h4><a href="contacts.html">${CO.contacts.email}</a><a href="contacts.html">${CO.contacts.phone}</a><a href="faq.html">Частые вопросы</a><a href="data-status.html">Данные и фото</a></div></div>
-  <div class="copy"><span>© 2026 NOMAD Journeys. Демонстрационный проект, не является публичной офертой.</span><span>Контакты и условия — шаблонные.</span></div></div></footer>`);
+  <div><h4>Связь</h4><a href="contacts.html">${CO.contacts.email}</a><a href="contacts.html">${CO.contacts.phone}</a><a href="faq.html">Частые вопросы</a><a href="photo-credits.html">Фото и авторы</a></div></div>
+  <div class="copy"><span>© 2026 NOMAD Journeys.</span><span>Информация на сайте не является публичной офертой.</span></div></div></footer>`);
   $('.burger').onclick = () => $('.nav').classList.toggle('open');
 }
 
@@ -53,7 +52,7 @@ function card(t) {
   <h3><a href="tour.html?id=${t.id}">${t.title}</a></h3>
   <p class="short">${t.short}</p>
   <div class="meta"><span class="lvl l${t.difficulty}">${LEVELS[t.difficulty]}</span><span>🧭 ${g.name}</span></div>
-  <div class="ft"><div class="price"><small>от${demoTag}</small><b>${rub(t.price_from)}</b></div>${d ? `<span class="dt">📅 ${fmtShort(d.start_date)}</span>` : ''}</div></div></article>`;
+  <div class="ft"><div class="price"><small>от</small><b>${rub(t.price_from)}</b></div>${d ? `<span class="dt">📅 ${fmtShort(d.start_date)}</span>` : ''}</div></div></article>`;
 }
 function bindFavs(root = document) {
   $$('[data-fav]', root).forEach(b => b.onclick = e => { e.preventDefault(); const on = favs.toggle(b.dataset.fav); $$(`[data-fav="${b.dataset.fav}"]`).forEach(x => x.classList.toggle('on', on)); toast(on ? 'Добавлено в избранное' : 'Убрано из избранного'); if (document.body.dataset.page === 'favorites') renderFavs(); });
@@ -149,32 +148,32 @@ const pages = {
       <section id="program"><h2>Программа по дням</h2><div class="days">${t.itinerary.map(d => `<details class="dayx" ${d.day === 1 ? 'open' : ''}><summary><em>День ${d.day}</em><span>${d.title}</span></summary><div class="dbody"><p>${d.summary}</p>
         <div class="places">${d.places.map(p => `<span>📍 ${p}</span>`).join('')}</div>
         ${d.activities ? `<p class="dl"><b>Активности:</b> ${d.activities.join('; ')}.</p>` : ''}${d.free_time ? `<p class="dl"><b>Свободное время:</b> ${d.free_time}</p>` : ''}${d.unique_experience ? `<p class="dl wow">✨ ${d.unique_experience}</p>` : ''}</div></details>`).join('')}</div>
-      <div class="note-demo">Программа — концепт маршрута. Перед запуском выезда оператор подтверждает логистику, расписания и доступность объектов.</div></section>
+      <div class="note-demo">Порядок дней и время переездов могут меняться из-за погоды и расписаний. Итоговую программу вы получаете после подтверждения бронирования.</div></section>
       <section id="logistics"><h2>Организация</h2><div class="rows"><div><h4>🏨 Размещение</h4><p>${t.accommodation}</p></div><div><h4>🚐 Транспорт</h4><p>${t.transport}</p></div><div><h4>🍽️ Питание</h4><p>${t.meals}</p></div></div>
       <h3>Ограничения и особенности</h3>${list(t.restrictions)}</section>
       <section id="included"><h2>Что входит в стоимость</h2><div class="two"><div class="box good"><h4>Включено</h4>${list(t.included)}</div><div class="box bad"><h4>Оплачивается отдельно</h4>${list(t.excluded)}</div></div>
-      <p class="muted">Базовая цена — за человека при двухместном размещении. Доплата за одноместное размещение — ${rub(t.single_supplement)} ${demoTag}.</p></section>
+      <p class="muted">Базовая цена — за человека при двухместном размещении. Доплата за одноместное размещение — ${rub(t.single_supplement)}.</p></section>
       <section id="prepare"><h2>Подготовка</h2><div class="two"><div><h4>Требования к участникам</h4>${list(t.requirements)}${t.fitness_requirements ? `<p>${t.fitness_requirements}</p>` : ''}</div><div><h4>Что взять</h4>${list(t.equipment)}</div></div>
       <div class="box warn"><h4>Визы и документы</h4><p>${t.docs_note || CO.entry_requirements_policy.text}</p><p class="muted">${CO.entry_requirements_policy.text}</p></div></section>
       <section id="booking"><h2>Даты и условия бронирования</h2>
-      <table class="tbl"><thead><tr><th>Выезд</th><th>Наличие</th><th>Цена</th></tr></thead><tbody>${deps.map(d => `<tr><td>${fmtDate(d.start_date)} — ${fmtDate(d.end_date)}</td><td>${STATUS[d.status]}${d.seats_available !== null ? `, свободно ${d.seats_available} из ${d.seats_total}` : ''} ${demoTag}</td><td>${rub(priceOf(t, d))} ${demoTag}</td></tr>`).join('')}</tbody></table>
-      <p class="muted">Даты и количество мест демонстрационные. Окончательные данные подтверждает менеджер.</p>
-      <h3>Оплата</h3><p>Предоплата ${CO.payment.prepayment_percent}% при подтверждении места, окончательная оплата — за ${CO.payment.final_payment_days_before} дней до выезда ${demoTag}. Сайт сейчас не принимает платежи. <a href="booking-payment.html">Подробнее</a></p>
-      <h3>Условия отмены (шаблон) ${demoTag}</h3><table class="tbl"><thead><tr><th>Когда отменяете</th><th>Возврат</th><th>Примечание</th></tr></thead><tbody>${tiers}</tbody></table>
+      <table class="tbl"><thead><tr><th>Выезд</th><th>Наличие</th><th>Цена</th></tr></thead><tbody>${deps.map(d => `<tr><td>${fmtDate(d.start_date)} — ${fmtDate(d.end_date)}</td><td>${STATUS[d.status]}${d.seats_available !== null ? `, свободно ${d.seats_available} из ${d.seats_total}` : ''}</td><td>${rub(priceOf(t, d))}</td></tr>`).join('')}</tbody></table>
+      <p class="muted">Актуальное наличие мест и итоговую цену подтверждает менеджер.</p>
+      <h3>Оплата</h3><p>Предоплата ${CO.payment.prepayment_percent}% при подтверждении места, окончательная оплата — за ${CO.payment.final_payment_days_before} дней до выезда. Сайт сейчас не принимает платежи. <a href="booking-payment.html">Подробнее</a></p>
+      <h3>Условия отмены</h3><table class="tbl"><thead><tr><th>Когда отменяете</th><th>Возврат</th><th>Примечание</th></tr></thead><tbody>${tiers}</tbody></table>
       <p class="muted">${CO.cancellation.disclaimer} ${CO.refund.minimum_group_note}</p></section>
       <section id="faq"><h2>Частые вопросы о туре</h2>${t.faq.map(f => `<details class="faqi"><summary>${f.q}</summary><p>${f.a}</p></details>`).join('')}</section>
       <section><h2>Ваш гид</h2><a class="ag" href="guide.html?id=${g.id}"><div class="av" style="--h:${hue(g.id)}">${initials(g.name)}</div><div><h3>${g.name}</h3><div class="role">${g.role} · ${g.city}</div><p>${g.bio}</p><p class="muted">${g.style}</p></div></a></section>
       <section><h2>Альтернативы</h2><div class="alts">${t.alternatives.map(a => `<a class="altc" href="tour.html?id=${a.tour}"><img loading="lazy" src="${img(TR[a.tour].images.hero, 400)}" alt=""><div><b>${TR[a.tour].title}</b><span>${a.reason}</span></div></a>`).join('')}</div></section>
     </div>
-    <aside class="book"><div class="pr"><small>от ${demoTag}</small> ${rub(t.price_from)}<small> / чел.</small></div>
-      <div class="f"><label>Дата выезда ${demoTag}</label><select class="in" id="bDate">${deps.map(d => `<option value="${d.id}">${fmtShort(d.start_date)} ${d.start_date.slice(0, 4)} · ${STATUS[d.status]}</option>`).join('')}</select></div>
+    <aside class="book"><div class="pr"><small>от</small> ${rub(t.price_from)}<small> / чел.</small></div>
+      <div class="f"><label>Дата выезда</label><select class="in" id="bDate">${deps.map(d => `<option value="${d.id}">${fmtShort(d.start_date)} ${d.start_date.slice(0, 4)} · ${STATUS[d.status]}</option>`).join('')}</select></div>
       <div class="f"><label>Путешественники</label><select class="in" id="bN">${Array.from({ length: t.group.max }, (_, i) => `<option value="${i + 1}">${i + 1} ${plural(i + 1, ['человек', 'человека', 'человек'])}</option>`).join('')}</select></div>
       <label class="chk"><input type="checkbox" id="bSingle"> Одноместное размещение (+${rub(t.single_supplement)})</label>
       <div class="tot"><span>Ориентировочно</span><span id="bTot"></span></div><p class="muted" id="bPre"></p>
       <button class="btn lg" style="width:100%" id="bGo">Оставить запрос</button>
       <button class="btn ghost sm" style="width:100%;margin-top:10px;color:var(--forest)" data-fav="${t.id}">${on ? '♥ В избранном' : '♡ В избранное'}</button>
-      <div class="trust"><span>Это не бронирование: запрос не списывает деньги</span><span>Условия — шаблон, см. «Бронирование и оплата»</span></div></aside></div>`;
-    const upd = () => { const d = DEPS.find(x => x.id === $('#bDate').value), n = +$('#bN').value, tot = priceOf(t, d) * n + ($('#bSingle').checked ? t.single_supplement : 0); $('#bTot').textContent = rub(tot); $('#bPre').textContent = `Предоплата по шаблону (${CO.payment.prepayment_percent}%): ${rub(tot * CO.payment.prepayment_percent / 100)}. Платежи сейчас не принимаются.`; };
+      <div class="trust"><span>Это не бронирование: запрос не списывает деньги</span><span>Оплата и отмена — на странице «Бронирование и оплата»</span></div></aside></div>`;
+    const upd = () => { const d = DEPS.find(x => x.id === $('#bDate').value), n = +$('#bN').value, tot = priceOf(t, d) * n + ($('#bSingle').checked ? t.single_supplement : 0); $('#bTot').textContent = rub(tot); $('#bPre').textContent = `Предоплата (${CO.payment.prepayment_percent}%): ${rub(tot * CO.payment.prepayment_percent / 100)}. Платежи сейчас не принимаются.`; };
     $$('#bDate,#bN,#bSingle').forEach(e => e.oninput = upd); upd();
     bindFavs($('#tour')); $('[data-fav]', $('.book')).addEventListener('click', e => e.currentTarget.textContent = favs.get().includes(t.id) ? '♥ В избранном' : '♡ В избранное');
     $('#mTitle').textContent = t.title;
@@ -182,8 +181,8 @@ const pages = {
     $('#mClose').onclick = () => $('#modal').style.display = 'none';
     $('#bForm').onsubmit = e => {
       e.preventDefault(); const d = DEPS.find(x => x.id === $('#bDate').value);
-      const req = { type: 'tour_inquiry', tour_id: t.id, departure_id: d.id, travelers: +$('#bN').value, single_room: $('#bSingle').checked, estimated_total: +$('#bTot').textContent.replace(/\D/g, ''), currency: 'RUB', contact: { name: $('#bName').value, channel: $('#bContact').value }, comment: $('#bComment').value, is_demo: true };
-      $('#bPreview').textContent = JSON.stringify(req, null, 2); e.target.style.display = 'none'; $('#bOk').style.display = 'block';
+      const tot = $('#bTot').textContent, single = $('#bSingle').checked ? ', одноместное размещение' : '';
+      $('#bPreview').textContent = ['Запрос на тур: ' + t.title, 'Выезд: ' + fmtDate(d.start_date) + ' — ' + fmtDate(d.end_date), 'Путешественников: ' + $('#bN').value + single, 'Ориентировочная стоимость: ' + tot, 'Имя: ' + $('#bName').value, 'Контакт: ' + $('#bContact').value, 'Комментарий: ' + ($('#bComment').value || '—')].join('\n'); e.target.style.display = 'none'; $('#bOk').style.display = 'block';
     };
   },
 
@@ -210,9 +209,8 @@ const pages = {
     const ts = TOURS.filter(t => t.guide === g.id);
     $('#gp').innerHTML = `<div class="gprof"><div class="av big" style="--h:${hue(g.id)}">${initials(g.name)}</div><div><span class="eyebrow">${g.role}</span><h1>${g.name}</h1>
       <div class="chips"><span class="chip">📍 ${g.city}, ${COU[g.country].name}</span><span class="chip">🗣 ${g.languages.join(', ')}</span><span class="chip">⏳ опыт ${g.experience_years} лет</span></div></div></div>
-      <div class="det"><div><h2>О гиде</h2><p>${g.bio}</p><h3>Как проводит путешествия</h3><p>${g.style}</p><h3>Специализация</h3><div class="chips">${g.specialties.map(s => `<span class="chip">${s}</span>`).join('')}</div>
-      <h3>Направления работы</h3><div class="chips">${g.regions.map(r => `<a class="chip" href="tours.html?country=${r}">${COU[r].name}</a>`).join('')}</div></div>
-      <aside class="box warn"><h4>Демонстрационный профиль</h4><p>Это вымышленный персонаж для прототипа, а не реальный сотрудник. Фотография и подтверждённые квалификации появятся после подключения реального партнёра.</p></aside></div>
+      <div class="det" style="grid-template-columns:minmax(0,1fr)"><div><h2>О гиде</h2><p>${g.bio}</p><h3>Как проводит путешествия</h3><p>${g.style}</p><h3>Специализация</h3><div class="chips">${g.specialties.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+      <h3>Направления работы</h3><div class="chips">${g.regions.map(r => `<a class="chip" href="tours.html?country=${r}">${COU[r].name}</a>`).join('')}</div></div></div>
       <h2 style="margin:40px 0 18px">Туры гида (${ts.length})</h2><div class="grid g3" id="gtours"></div>`;
     renderCards($('#gtours'), ts);
   },
@@ -266,8 +264,7 @@ const R = {
   refund: () => `<p>${CO.refund.text}</p><p>${CO.refund.minimum_group_note}</p>`,
   safety: () => CO.safety.map(p => `<div class="feat"><h3>${p.title}</h3><p>${p.text}</p></div>`).join(''),
   entry: () => `<p>${CO.entry_requirements_policy.text}</p>`,
-  contacts: () => `<p>📧 ${CO.contacts.email}</p><p>📞 ${CO.contacts.phone}</p><p>💬 ${CO.contacts.messenger}</p><p>🕒 ${CO.contacts.hours}</p><p class="muted">${CO.contacts.note}</p>`,
-  flags: () => `<table class="tbl"><thead><tr><th>Данные</th><th>Статус</th></tr></thead><tbody>${[['Цены туров', 'демонстрационные, не являются предложением'], ['Даты выездов', 'демонстрационные'], ['Количество свободных мест', 'демонстрационное, не отражает реальное наличие'], ['Программы маршрутов', 'концепт: требует проверки оператором (расписания, доступность, разрешения)'], ['Визы и документы', 'не подтверждены, проверяются менеджером'], ['Профили гидов', 'вымышленные персонажи, без подтверждённых квалификаций и фотографий'], ['Условия оплаты и отмены', 'шаблон, требует утверждения юристом'], ['Контакты', 'вымышленные (домен .example)'], ['Отзывы', 'отсутствуют: публикуются только после реальных поездок']].map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</tbody></table>`,
+  contacts: () => `<p>📧 ${CO.contacts.email}</p><p>📞 ${CO.contacts.phone}</p><p>💬 ${CO.contacts.messenger}</p><p>🕒 ${CO.contacts.hours}</p>`,
   credits: () => `<p class="muted">${IM.note}</p><ul class="credits">${Object.entries(IM.commons).map(([k, v]) => `<li><a href="${v.page}" target="_blank" rel="noopener">${v.file.replace(/_/g, ' ')}</a> — ${v.author}, ${v.license}</li>`).join('')}</ul>`
 };
 function renderBlocks() { $$('[data-render]').forEach(el => { el.innerHTML = R[el.dataset.render](); }); }
