@@ -33,8 +33,7 @@ function layout() {
   const page = document.body.dataset.page;
   const nav = [['tours.html', 'Туры', 'tours'], ['match.html', 'Подбор тура', 'match'], ['destinations.html', 'Направления', 'dest'], ['guides.html', 'Гиды', 'guides'], ['about.html', 'О компании', 'about'], ['contacts.html', 'Контакты', 'contacts']];
   const logo = '<a class="logo" href="index.html"><img src="assets/logo.svg" alt="" width="34" height="34"><span><b>NOMAD</b> Journeys</span></a>';
-  document.body.insertAdjacentHTML('afterbegin', `<div class="demo-bar"><span>Демонстрационная версия: цены, даты, места и профили гидов иллюстративные.</span> <a href="data-status.html">Что требует подтверждения</a></div>
-  <header class="hd"><div class="wrap">${logo}<nav class="nav">${nav.map(n => `<a href="${n[0]}" class="${page === n[2] ? 'on' : ''}">${n[1]}</a>`).join('')}</nav>
+  document.body.insertAdjacentHTML('afterbegin', `<header class="hd"><div class="wrap">${logo}<nav class="nav">${nav.map(n => `<a href="${n[0]}" class="${page === n[2] ? 'on' : ''}">${n[1]}</a>`).join('')}</nav>
   <a class="fav" href="favorites.html">♥ Избранное<b>${favs.get().length}</b></a><button class="burger" aria-label="Меню">☰</button></div></header>`);
   document.body.insertAdjacentHTML('beforeend', `<footer class="ft-main"><div class="wrap"><div class="ftg">
   <div>${logo.replace('class="logo"', 'class="logo light"')}<p style="max-width:330px;font-size:15px;margin-top:12px">Авторские путешествия малыми группами. Подробные программы, понятные условия и гиды, которые знают регион.</p></div>
@@ -289,7 +288,7 @@ function fx() {
 if (location.hash === '#shot') document.documentElement.classList.add('shot');
 layout(); renderBlocks();
 const pg = document.body.dataset.page; (pages[pg] || (() => { }))(); if (document.querySelector('form[data-demo]')) pages.form();
-const hd = $('.hd'); const home = pg === 'home'; const onS = () => { hd.classList.toggle('solid', scrollY > 40); if (home && innerWidth > 1020) hd.style.top = Math.max(0, 36 - scrollY) + 'px'; }; onS(); addEventListener('scroll', onS, { passive: true });
+const hd = $('.hd'); const home = pg === 'home'; const onS = () => { hd.classList.toggle('solid', scrollY > 40); }; onS(); addEventListener('scroll', onS, { passive: true });
 $$('.band').forEach(b => b.style.backgroundImage = `url('${img(b.dataset.parallax, 1800)}')`);
 const PH = { tours: 'dolomites', dest: 'np-2', guides: 'hills', favorites: 'forest', about: 'bridge', how: 'valley', pay: 'lakeL', safety: 'peak', faq: 'kam-1', contacts: 'lakeL', become: 'peak', data: 'forest', match: 'ge-1', tour: 'valley' };
 if (PH[pg] && $('.phead')) $('.phead').style.backgroundImage = `url('${img(PH[pg], 1800)}')`;
