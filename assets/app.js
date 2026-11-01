@@ -280,8 +280,8 @@ function renderFavs() {
 
 /* ---------- эффекты ---------- */
 function fx() {
-  if (!window._io) window._io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); window._io.unobserve(e.target); $$('[data-n]', e.target).forEach(c => { const to = +c.dataset.n, t0 = performance.now(); const f = t => { const p = Math.min(1, (t - t0) / 1600), v = to * (1 - Math.pow(1 - p, 3)); c.textContent = Math.round(v).toLocaleString('ru-RU'); p < 1 && requestAnimationFrame(f); }; requestAnimationFrame(f); }); } }), { threshold: .12 });
-  $$('.rv:not(.seen)').forEach(el => { el.classList.add('seen'); window._io.observe(el); });
+  if (!window._io) window._io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); window._io.unobserve(e.target); $$('[data-n]', e.target).forEach(c => { const to = +c.dataset.n, t0 = performance.now(); const f = t => { const p = Math.min(1, (t - t0) / 1600), v = to * (1 - Math.pow(1 - p, 3)); c.textContent = Math.round(v).toLocaleString('ru-RU'); p < 1 && requestAnimationFrame(f); }; requestAnimationFrame(f); }); } }), { threshold: .08 });
+  $$('.rv:not(.seen)').forEach(el => { el.classList.add('seen'); const r = el.getBoundingClientRect(); if (el.offsetHeight > innerHeight * .7 || (r.top < innerHeight && r.bottom > 0)) el.classList.add('vis'); else window._io.observe(el); });
   $$('.card:not(.tl)').forEach(c => { c.classList.add('tl'); c.addEventListener('mousemove', e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; c.style.transform = `perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`; }); c.addEventListener('mouseleave', () => c.style.transform = ''); });
 }
 
@@ -292,5 +292,5 @@ const hd = $('.hd'); const home = pg === 'home'; const onS = () => { hd.classLis
 $$('.band').forEach(b => b.style.backgroundImage = `url('${img(b.dataset.parallax, 1800)}')`);
 const PH = { tours: 'dolomites', dest: 'np-2', guides: 'hills', favorites: 'forest', about: 'bridge', how: 'valley', pay: 'lakeL', safety: 'peak', faq: 'kam-1', contacts: 'lakeL', become: 'peak', data: 'forest', match: 'ge-1', tour: 'valley' };
 if (PH[pg] && $('.phead')) $('.phead').style.backgroundImage = `url('${img(PH[pg], 1800)}')`;
-$$('.sh,.grid,.steps,.cta,.feat,.two,.faqi').forEach(e => { if (!e.classList.contains('rv') && !e.closest('.hero') && !e.closest('.filters') && !e.closest('#modal') && !e.closest('.card')) e.classList.add('rv'); });
+$$('.sh,.grid,.steps,.cta,.feat,.two,.faqi').forEach(e => { if (!e.classList.contains('rv') && !e.closest('.hero') && !e.closest('.filters') && !e.closest('#modal') && !e.closest('.card') && !e.querySelector('.card')) e.classList.add('rv'); });
 fx();

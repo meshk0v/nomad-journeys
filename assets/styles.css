@@ -212,3 +212,6 @@ html.shot .rv{opacity:1!important;transform:none!important;transition:none!impor
 @media(max-width:1020px){.home .hd{position:sticky;top:0!important;background:var(--glass);color:var(--ink);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.home .hd .logo{color:var(--forest)}.home .hd .nav a{color:var(--ink)}.home .hd .fav{color:var(--accent2)}.hero-in{padding-top:70px!important}}
 .det>*,.det-main,.two>*,.rows>*,.cat-lay>*{min-width:0}.det-main{overflow-wrap:anywhere}.tbl{display:block;overflow-x:auto}.pre{max-width:100%}
 @media(max-width:1020px){.det{grid-template-columns:minmax(0,1fr)}.cat-lay{grid-template-columns:minmax(0,1fr)}}
+
+.s:not(.dark) .feat{background:var(--tint);border:1px solid var(--line);color:var(--ink)}.s:not(.dark) .feat h3{color:var(--ink)}.s:not(.dark) .feat p{color:var(--mut)}.s:not(.dark) .feat:hover{background:#e3f0e9}
+.s.dark .feat{color:#fff}
